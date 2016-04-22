@@ -3,6 +3,11 @@
 
 # include <libft.h>
 
-void	ft_printf(char *str);
+/*
+**	ft_printf.c
+*/
+
+int		ft_printf(char *str, ...);
+char	*do_things(char *str, va_list ap, int *ret);
 
 #endif
