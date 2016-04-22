@@ -6,7 +6,7 @@
 /*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 18:55:26 by nromptea          #+#    #+#             */
-/*   Updated: 2016/04/22 18:58:01 by nromptea         ###   ########.fr       */
+/*   Updated: 2016/04/22 19:14:27 by nromptea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int		main(void)
 {
-	ft_printf("Hello %%%World\n");
+	ft_printf("Hello %%% World\n", "coucou");
 	return (0);
 }
