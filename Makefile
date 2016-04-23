@@ -1,15 +1,3 @@
-#******************************************************************************#
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: gsaynac <gsaynac@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2013/11/20 19:46:32 by gsaynac           #+#    #+#              #
-#    Updated: 2014/05/14 20:01:14 by gsaynac          ###   ########.fr        #
-#                                                                              #
-#******************************************************************************#
-
 NAME	=	libftprintf.a
 
 CC		=	gcc
@@ -18,6 +6,8 @@ FLAGS	=	-Wall -Wextra -Werror
 
 SRC_D	=	./src/
 SRC		=	$(SRC_D)ft_printf.c \
+			$(SRC_D)process.c \
+			$(SRC_D)parse.c
 
 OBJ_D	=	.obj/
 OBJ		=	$(SRC:$(SRC_D)%.c=$(OBJ_D)%.o)

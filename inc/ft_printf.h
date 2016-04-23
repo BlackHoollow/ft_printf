@@ -1,25 +1,38 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/23 12:38:03 by nromptea          #+#    #+#             */
-/*   Updated: 2016/04/23 12:38:06 by nromptea         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <libft.h>
 
+typedef int			bool;
+
+# define true 1
+# define false 0
+
+typedef struct		s_printf
+{
+	int				ret;
+	va_list			ap;
+	char			converter;
+}					t_printf;
+
 /*
 **	ft_printf.c
 */
 
-int		ft_printf(char *str, ...);
-char	*do_things(char *str, va_list ap, int *ret);
+void				flush(char *str, t_printf *p, bool should_free);
+int					ft_printf(char *str, ...);
+
+/*
+**	process.c
+*/
+
+char				*process(char *str, t_printf *p);
+
+/*
+**	check.c
+*/
+
+int					parse(char *str, t_printf *p);
+
 
 #endif
