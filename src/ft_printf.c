@@ -6,7 +6,7 @@
 /*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 18:39:15 by nromptea          #+#    #+#             */
-/*   Updated: 2016/04/22 19:15:31 by nromptea         ###   ########.fr       */
+/*   Updated: 2016/04/23 13:00:16 by nromptea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,8 @@ int		ft_printf(char *str, ...)
 {
 	va_list	ap;
 	int		ret;
-	char	*s;
 
-	va_start(ap, str);
-	s = va_arg(ap, char *);
-	ft_putendl(s);
+	ret = 0;
 	while (*str != '\0')
 	{
 		if (*str != '%')
