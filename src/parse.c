@@ -31,7 +31,7 @@ static bool		isModifier(char c)
 static bool		isConverter(char c)
 {
 	//"sSpdDioOuUxXcC"
-	char	converters[] = "s";
+	char	converters[] = "sdic%";
 
 	if (ft_strchr(converters, c))
 		return (true);
@@ -50,14 +50,14 @@ int				parse(char *str, t_printf *p)
 		{
 			p->converter = str[i];
 			return (i + 1);
-		}
-		else if (isModifier(str[i]))
-			(void)str;
+		}	
 		else if (isFlag(str[i]))
 			(void)str;
 		else if (isWidth(str[i]))
 			(void)str;
 		else if (isPrecision(str[i]))
+			(void)str;
+		else if (isModifier(str[i]))
 			(void)str;
 		else
 			return (0);

@@ -13,6 +13,7 @@ int				ft_printf(char *str, ...)
 	t_printf	p;
 	int			i;
 
+	p.ret = 0;
 	va_start(p.ap, str);
 	i = 0;
 	while (*str != '\0')
