@@ -6,7 +6,7 @@
 #    By: gsaynac <gsaynac@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 19:46:32 by gsaynac           #+#    #+#              #
-#    Updated: 2014/05/14 20:01:14 by gsaynac          ###   ########.fr        #
+#    Updated: 2016/04/25 18:30:15 by nromptea         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -71,6 +71,7 @@ SRC = $(SRC_D)ft_atoi.c \
 	$(SRC_D)ft_strjoin.c \
 	$(SRC_D)ft_strtrim.c \
 	$(SRC_D)ft_itoa.c \
+	$(SRC_D)ft_itoa_base.c \
 	$(SRC_D)ft_strsplit.c \
 	$(SRC_D)ft_lstnew.c \
 	$(SRC_D)ft_lstdelone.c \

@@ -3,6 +3,6 @@
 
 int		main(void)
 {
-	ft_printf("coucou %ce %cuis %content\n", 'j', 's', 'c');
+	printf("%X\n", 15);
 	return (0);
 }
