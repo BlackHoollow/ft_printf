@@ -13,6 +13,7 @@ typedef struct		s_printf
 	int				ret;
 	va_list			ap;
 	char			converter;
+	int				width;
 }					t_printf;
 
 /*
