@@ -6,7 +6,7 @@
 /*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 19:33:20 by nromptea          #+#    #+#             */
-/*   Updated: 2015/12/09 18:52:24 by nromptea         ###   ########.fr       */
+/*   Updated: 2016/04/26 12:29:17 by nromptea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	*itoa_rec(long long n, char *res, int base)
 {
-	if (n > 9)
+	if (n >= base)
 		res = itoa_rec(n / base, res, base);
 	*res = "0123456789ABCDEF"[n % base];
 	*(res + 1) = '\0';
@@ -33,12 +33,14 @@ char		*ft_itoa_base(int n, int base)
 	nbch = 1;
 	i = 0;
 	tmp = n;
-	while (nb >= 10)
+	if (nb < 0)
+		nb = -nb;
+	while (nb >= base)
 	{
-		nb = nb / 10;
+		nb = nb / base;
 		nbch++;
 	}
-	if (!(res = (char *)malloc(sizeof(char) * nbch + 1)))
+	if (!(res = (char *)malloc(sizeof(char) * (nbch + 1))))
 		return (NULL);
 	if (tmp < 0)
 	{
