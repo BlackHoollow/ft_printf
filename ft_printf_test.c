@@ -3,7 +3,7 @@
 
 int		main(void)
 {
-	ft_putendl(ft_itoa_base(-20, 16));
-	//printf("%X\n", 2000);
+	ft_printf("%u\n", 200);
+	printf("%U\n", 200);
 	return (0);
 }
